@@ -1,0 +1,19 @@
+{
+  "name": "sovereign-witness",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@qvac/llm-llamacpp": "^0.18.0",
+    "@qvac/ocr-onnx": "^0.4.2",
+    "@qvac/sdk": "^0.9.1",
+    "@tetherto/wdk": "file:wdk-main"
+  }
+}
