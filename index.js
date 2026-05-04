@@ -162,8 +162,8 @@ Text: "${ocrText}"`;
             
             // Solana Address Safety Guard (Base58 & Length 32-44)
             if (parsedData.recipient_address) {
-                // Auto-clean any accidental spaces added by OCR
-                parsedData.recipient_address = parsedData.recipient_address.replace(/\s+/g, '');
+                // Auto-clean any accidental spaces or punctuation added by OCR/LLM
+                parsedData.recipient_address = parsedData.recipient_address.replace(/[\s.,;!?'"]/g, '');
                 
                 // Cross-Chain Detective Filter
                 const isEthereum = parsedData.recipient_address.startsWith('0x');
