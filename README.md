@@ -24,14 +24,14 @@ A simple demo relies on perfect handwriting; a meaningful integration anticipate
 
 The pipeline is split into three tightly integrated, sequential micro-engines:
 
-### 1. `Mata` (The Eyes) - QVAC OCR
+### 1. `VisionEngine` (The Eyes) - QVAC OCR
 Powered by `@qvac/ocr-onnx`, this module physically scans the image buffer to extract raw bounding-box text. It operates securely in an air-gapped environment to protect user privacy.
 
-### 2. `Otak` (The Brain) - QVAC LLM
+### 2. `AnalyticalEngine` (The Brain) - QVAC LLM
 Powered by a 1B lightweight LLM via `@qvac/llm-llamacpp`, the brain analyzes the raw text to extract three critical fields: `amount_usdt`, `purpose`, and `recipient_address`. It is constrained by strict prompt rules to ignore volatile currencies, sub-totals, and structural grammar. 
 
-### 3. `Tangan` (The Hands) - Tether WDK Integration
-The physical executor. `Tangan` dynamically instantiates the `WalletManagerSolana` within the local WDK instance. It pipes the sanitized data directly into the Devnet environment, drafting the transaction locally pending user review.
+### 3. `ExecutionEngine` (The Hands) - Tether WDK Integration
+The physical executor. `ExecutionEngine` dynamically instantiates the `WalletManagerSolana` within the local WDK instance. It pipes the sanitized data directly into the Devnet environment, drafting the transaction locally pending user review.
 
 ## The "Witness" Philosophy
 
@@ -64,7 +64,7 @@ To maximize precision and eliminate ambiguous operations, Sovereign Witness enfo
 ### Execution
 Run the core pipeline to capture an image, perform local AI extraction, and draft the transaction to the local WDK instance:
 ```bash
-node witness.js
+node index.js
 ```
 
 Upon successful extraction and cross-chain validation, the system will prepare the draft and emit the final safety notice:
