@@ -75,3 +75,7 @@ recipient address and amount. Sovereign Witness is a
 witness, not an executor.
 =========================================
 ```
+
+## 📺 Project Demo
+[![YouTube Demo](https://img.shields.io/badge/YouTube-Demo-red?style=for-the-badge&logo=youtube)](https://youtu.be/w7s4S62Nlrs)
+[![X/Twitter Post](https://img.shields.io/badge/X/Twitter-Post-black?style=for-the-badge&logo=x)](https://x.com/_JD_ID_/status/2051284526090039729?s=20)
